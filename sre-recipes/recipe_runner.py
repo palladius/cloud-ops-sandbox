@@ -197,9 +197,9 @@ class ActionHandler:
         """
         for cmd in config["commands"]:
             output, err = utils.run_shell_command(cmd)
-            if err:
-                raise RuntimeError(
-                    f"Failed to run command `{cmd}`: {err}")
+#             if err:
+#                 raise RuntimeError(
+#                     f"Failed to run command `{cmd}`: {err}")
 
     def run_multiple_choice_quiz(self, config):
         """Runs an interactive multiple choice quiz.
