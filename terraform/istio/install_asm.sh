@@ -58,7 +58,7 @@ kubectl label namespace asm-ingress istio-injection=enabled --overwrite
 ### only install ingress with one replica max..
 sed -i 's/replicas\: 3/replicas\: 1/g' $WORK_DIR/asm_output/samples/gateways/istio-ingressgateway/deployment.yaml
 sed -i 's/minReplicas\: 3/minReplicas\: 1/g' $WORK_DIR/asm_output/samples/gateways/istio-ingressgateway/deployment.yaml
-sed -i 's/replicas\: 3/replicas\: 1/g' $WORK_DIR/asm_output/samples/gateways/istio-ingressgateway/deployment.yaml
+sed -i 's/maxReplicas\: 5/maxReplicas\: 1/g' $WORK_DIR/asm_output/samples/gateways/istio-ingressgateway/deployment.yaml
 
 kubectl apply -n asm-ingress -f $WORK_DIR/asm_output/samples/gateways/istio-ingressgateway
 
